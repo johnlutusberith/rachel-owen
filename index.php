@@ -1131,7 +1131,10 @@ footer{
 </div>
 ';} ?>
 	<script>
-	
+	if(typeof window.history.pushState == 'function') {
+        window.history.pushState({}, "Hide", "http://rachel-owen.github.io/");
+    }
+
 	var openPhotoSwipe = function () {
   var parseThumbnailElements = function (el) {
     var thumbElements = el.childNodes,
